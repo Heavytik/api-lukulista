@@ -7,7 +7,7 @@ function arvoNumero(alaraja, ylaraja) {
     return Math.floor(ylaraja * Math.random()) + alaraja
 }
 
-const NUMEROLISTA = [
+let numerolista = [
     arvoNumero(0,5),
     arvoNumero(10,15),
     arvoNumero(100,500),
@@ -16,7 +16,7 @@ const NUMEROLISTA = [
 ]
 
 app.get('/', function (req, res) {
-    res.json(NUMEROLISTA)
+    res.json(numerolista)
 })
 
 app.listen(PORT)
